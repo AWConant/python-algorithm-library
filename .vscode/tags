@@ -4,29 +4,32 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-bfs_tree_from_leaves	../graph\trees.py	/^def bfs_tree_from_leaves(children, root):$/;"	kind:function	line:59
+__init__.py	../algorithm_library\__init__.py	1;"	kind:file	line:1
+bfs_tree_from_leaves	../algorithm_library\graph\trees.py	/^def bfs_tree_from_leaves(children, root):$/;"	kind:function	line:59
 binary_search	../lib.py	/^def binary_search(a, x, lo=0, hi=None): # O(lg(n))$/;"	kind:function	line:127
 bisect_left	../lib.py	/^    from bisect import bisect_left$/;"	kind:namespace	line:128
-connected_components	../graph\connected_components.py	/^def connected_components(g, nodes): # O(V+E)$/;"	kind:function	line:2
-connected_components.py	../graph\connected_components.py	1;"	kind:file	line:1
-count_inversions.py	../array\count_inversions.py	1;"	kind:file	line:1
-dag_dijkstra	../graph\dag_dijkstra.py	/^def dag_dijkstra(g, nodes, weights, start, topsort):$/;"	kind:function	line:1
-dag_dijkstra.py	../graph\dag_dijkstra.py	1;"	kind:file	line:1
-defaultdict	../graph\trees.py	/^    from collections import defaultdict$/;"	kind:namespace	line:8
-deque	../graph\topsort.py	/^    from collections import deque$/;"	kind:namespace	line:20
-deque	../graph\trees.py	/^    from collections import deque$/;"	kind:namespace	line:60
-dfs_get_component	../graph\connected_components.py	/^    def dfs_get_component(start, visited):$/;"	kind:function	line:3
-get_subtree_sizes	../graph\trees.py	/^def get_subtree_sizes(tree, parent_of, root, nodes, node_weights=None):$/;"	kind:function	line:35
-graph_as_tree	../graph\trees.py	/^def graph_as_tree(g, root): # O(n)$/;"	kind:function	line:7
+connected_components	../algorithm_library\graph\connected_components.py	/^def connected_components(g, nodes): # O(V+E)$/;"	kind:function	line:2
+connected_components.py	../algorithm_library\graph\connected_components.py	1;"	kind:file	line:1
+count_inversions.py	../algorithm_library\array\count_inversions.py	1;"	kind:file	line:1
+dag_dijkstra	../algorithm_library\graph\dag_dijkstra.py	/^def dag_dijkstra(g, nodes, weights, start, topsort):$/;"	kind:function	line:1
+dag_dijkstra.py	../algorithm_library\graph\dag_dijkstra.py	1;"	kind:file	line:1
+defaultdict	../algorithm_library\graph\trees.py	/^    from collections import defaultdict$/;"	kind:namespace	line:8
+deque	../algorithm_library\graph\topsort.py	/^    from collections import deque$/;"	kind:namespace	line:20
+deque	../algorithm_library\graph\trees.py	/^    from collections import deque$/;"	kind:namespace	line:60
+dfs_get_component	../algorithm_library\graph\connected_components.py	/^    def dfs_get_component(start, visited):$/;"	kind:function	line:3
+get_subtree_sizes	../algorithm_library\graph\trees.py	/^def get_subtree_sizes(tree, parent_of, root, nodes, node_weights=None):$/;"	kind:function	line:35
+graph_as_tree	../algorithm_library\graph\trees.py	/^def graph_as_tree(g, root): # O(n)$/;"	kind:function	line:7
 lib.py	../lib.py	1;"	kind:file	line:1
 longest_palindromic_subsequence	../lib.py	/^def longest_palindromic_subsequence(s): # O(n^2)$/;"	kind:function	line:27
 next_permutation	../lib.py	/^def next_permutation(arr): # O(n)$/;"	kind:function	line:56
+pytest	../algorithm_library\array\tests\test_count_inversions.py	/^import pytest/;"	kind:namespace	line:1
 quickselect	../lib.py	/^def quickselect(a, k): # O(n)ish$/;"	kind:function	line:82
 randint	../lib.py	/^    from random import randint$/;"	kind:namespace	line:83
 reverse_linked_list	../lib.py	/^def reverse_linked_list(ls):$/;"	kind:function	line:16
 select	../lib.py	/^    def select(a, lo, hi, k):$/;"	kind:function	line:85
-sort_count	../array\count_inversions.py	/^def sort_count(ls):$/;"	kind:function	line:1
-todo.py	../graph\todo.py	1;"	kind:file	line:1
-topsort	../graph\topsort.py	/^def topsort(g, nodes):$/;"	kind:function	line:1
-topsort.py	../graph\topsort.py	1;"	kind:file	line:1
-trees.py	../graph\trees.py	1;"	kind:file	line:1
+sort_count	../algorithm_library\array\count_inversions.py	/^def sort_count(ls):$/;"	kind:function	line:1
+test_count_inversions.py	../algorithm_library\array\tests\test_count_inversions.py	1;"	kind:file	line:1
+todo.py	../algorithm_library\graph\todo.py	1;"	kind:file	line:1
+topsort	../algorithm_library\graph\topsort.py	/^def topsort(g, nodes):$/;"	kind:function	line:1
+topsort.py	../algorithm_library\graph\topsort.py	1;"	kind:file	line:1
+trees.py	../algorithm_library\graph\trees.py	1;"	kind:file	line:1
