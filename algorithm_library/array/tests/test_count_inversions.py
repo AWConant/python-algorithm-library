@@ -2,9 +2,9 @@ from .. import count_inversions
 
 import pytest
 
-def _test_sort_count(ls, correct_inv_count):
-    in_order, inv_count = count_inversions.sort_count(ls)
-    assert in_order == sorted(ls)
+def _test_sort_count(xs, correct_inv_count):
+    in_order, inv_count = count_inversions.sort_count(xs)
+    assert in_order == sorted(xs)
     assert correct_inv_count == inv_count
 
 def test_general():

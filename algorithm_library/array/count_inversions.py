@@ -1,4 +1,4 @@
-def sort_count(ls):
+def sort_count(xs):
     """
     Counts the inversions in an list while building a sorted copy.
 
@@ -10,12 +10,12 @@ def sort_count(ls):
     inv_count -- total number of inversions in list
     """
 
-    if len(ls) < 2:
-        return ls, 0
+    if len(xs) < 2:
+        return xs, 0
 
-    mid_idx = len(ls)//2
-    first_half, first_half_inv_count = sort_count(ls[:mid_idx])
-    second_half, second_half_inv_count = sort_count(ls[mid_idx:])
+    mid_idx = len(xs)//2
+    first_half, first_half_inv_count = sort_count(xs[:mid_idx])
+    second_half, second_half_inv_count = sort_count(xs[mid_idx:])
 
     combine_inv_count = 0
     i = j = 0
