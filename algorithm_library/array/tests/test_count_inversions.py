@@ -2,17 +2,15 @@ from .. import count_inversions
 
 import pytest
 
-def _test_sort_count(xs, correct_inv_count):
+@pytest.mark.parametrize("xs, correct_inv_count", [
+    ([2], 0),
+    ([], 0),
+    ([2, 4, 1, 3, 5], 3),
+    ([1, 20, 6, 4], 3),
+    ([1, 2, 3, 4, 5], 0),
+    ([2, 1, 3, 4, 5], 1),
+])
+def test_general(xs, correct_inv_count):
     in_order, inv_count = count_inversions.sort_count(xs)
     assert in_order == sorted(xs)
     assert correct_inv_count == inv_count
-
-def test_general():
-    _test_sort_count([2, 4, 1, 3, 5], 3)
-    _test_sort_count([1, 20, 6, 4], 3)
-    _test_sort_count([1, 2, 3, 4, 5], 0)
-    _test_sort_count([2, 1, 3, 4, 5], 1)
-
-def test_small():
-    _test_sort_count([2], 0)
-    _test_sort_count([], 0)
