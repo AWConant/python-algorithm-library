@@ -1,6 +1,8 @@
 def sort_count(xs):
     """
     Counts the inversions in an list while building a sorted copy.
+    Time complexity: O(n*lg(n))
+    Space complexity: O(n*lg(n))
 
     Parameters:
     ls -- a list of orderable values

@@ -1,7 +1,8 @@
 def binary_search(xs, x):
     """
     Binary search a sorted list for value x.
-    Runs in O(lg(n)) time.
+    Time complexity: O(lg(n))
+    Space complexity: O(1)
 
     Parameters:
     xs -- a list of orderable values sorted in nondecreasing order
@@ -10,10 +11,6 @@ def binary_search(xs, x):
 
     Returns:
     idx -- the leftmost index of x in xs (or -1, if x is not in xs)
-
-    Credit:
-    Credit person/website
-    URL
     """
     from bisect import bisect_left
 

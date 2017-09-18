@@ -1,7 +1,8 @@
 def dag_dijkstra(g, nodes, weights, start, topsort):
     """
     Get distances from a start node to each node in the input DAG.
-    Runs in O(V+E) time.
+    Time complexity: O(V+E)
+    Space complexity: O(topsort(g))
 
     Parameters:
     g       -- graph as an adjacency list (dictionary mapping node label to

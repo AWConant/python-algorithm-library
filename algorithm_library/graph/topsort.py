@@ -2,7 +2,8 @@ def topsort(g, nodes):
     """
     An implementation of Kahn's algorithm.
     Returns a topological ordering of an input DAG.
-    Runs in O(V+E) time.
+    Time complexity: O(V+E)
+    Space complexity: O(V)
 
     Parameters:
     g     -- graph as an adjacency list (dictionary mapping node label to
