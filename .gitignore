@@ -1,4 +1,4 @@
 lib.py
-.vscode
-.cache
-__pycache__
+.vscode/
+.cache/
+__pycache__/
