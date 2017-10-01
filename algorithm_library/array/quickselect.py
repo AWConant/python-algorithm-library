@@ -9,7 +9,6 @@ def quickselect(xs, k):
     lo --
     hi --
     k  --
-    ...
 
     Returns:
     x    -- k'th smallest element in xs
