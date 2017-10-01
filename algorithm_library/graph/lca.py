@@ -4,7 +4,7 @@ class LCAStaticTree(object):
     """
     Reduces lowest common ancestor problem on an unchanging tree to the RMQ
     problem. Uses a Sparse Table to answer LCA queries efficiently.
-    Time complexity: 
+    Time complexity:
       Construction: O(n*lg(n))
       Query: O(1)
     Space complexity: O(n*lg(n))

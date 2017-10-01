@@ -17,11 +17,11 @@ class SparseTable(object):
     A query is of the form (lo, hi), and requests the result of the following:
 
     f(a[lo], f(a[lo+1], ... f(hi-1, hi)))
-    
+
     for some array of elements a and some binary, associative function f.
     The table is constructed in O(n*lg(n)) time and occupies the same amount of
     space. Queries are answered in constant time.
-    Time complexity: 
+    Time complexity:
       Construction: O(n*lg(n))
       Query: O(1)
     Space complexity: O(n*lg(n))
@@ -87,4 +87,3 @@ class SparseTable(object):
             j += 1
 
         return sparse_table
-
