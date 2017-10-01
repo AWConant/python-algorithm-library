@@ -33,7 +33,7 @@ def graph_as_tree(g, root):
         parent_of[node] = prev
 
         children = [v for v in g[node] if v != prev]
-        if len(children) == 0:
+        if not children:
             leaves.append(node)
         else:
             tree[node].extend(children)
