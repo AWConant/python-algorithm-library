@@ -1,9 +1,8 @@
 from ..array import rmq
 
 class LCAStaticTree(object):
-    def __init__(self, graph, node_count, root):
+    def __init__(self, graph, root):
         self.graph = graph
-        self.node_count = node_count
         self.root = root
 
         self.first_idx = dict()
