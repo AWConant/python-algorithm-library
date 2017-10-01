@@ -1,4 +1,4 @@
-from .. import count_inversions
+from .. import inversions
 
 import pytest
 
@@ -11,6 +11,6 @@ import pytest
     ([2, 1, 3, 4, 5], 1),
 ])
 def test_general(xs, correct_inv_count):
-    in_order, inv_count = count_inversions.sort_count(xs)
+    in_order, inv_count = inversions.sort_count(xs)
     assert in_order == sorted(xs)
     assert correct_inv_count == inv_count
