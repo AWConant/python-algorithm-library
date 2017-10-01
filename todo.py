@@ -11,3 +11,5 @@
 # TODO: Kruskal's (MST)
 
 # TODO: Prim's (MST)
+
+# TODO: organize tree algorithms
