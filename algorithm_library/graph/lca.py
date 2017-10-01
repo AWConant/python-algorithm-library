@@ -1,4 +1,4 @@
-from ..array import rmq
+from ..array import sparsetable
 
 class LCAStaticTree(object):
     def __init__(self, graph, root):
@@ -9,7 +9,7 @@ class LCAStaticTree(object):
         self.euler_walk = []
         self.depth_array = []
         self._perform_euler_walk()
-        self.rmq_handler = rmq.RMQStaticArray(self.depth_array)
+        self.rmq_handler = sparsetable.SparseTable(self.depth_array, sparsetable.rmq_idx, True)
 
     def query(self, node1, node2):
         if self.first_idx[node1] > self.first_idx[node2]:

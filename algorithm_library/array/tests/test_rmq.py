@@ -1,4 +1,4 @@
-from .. import rmq
+from .. import sparsetable
 
 import pytest
 
@@ -10,6 +10,6 @@ import pytest
     ),
 ])
 def test_general(array, queries, expected):
-    rmq_handler = rmq.RMQStaticArray(array)
+    rmq_handler = sparsetable.SparseTable(array, sparsetable.rmq_idx, True)
     for query, correct in zip(queries, expected):
         assert rmq_handler.query(*query) == correct

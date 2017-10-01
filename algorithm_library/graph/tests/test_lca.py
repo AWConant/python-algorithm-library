@@ -16,6 +16,6 @@ def test_general(edges, queries, expected):
         graph[u].append(v)
         graph[v].append(u)
 
-    lca_handler = lca.LCAStaticTree(graph, len(graph.keys()), 1)
+    lca_handler = lca.LCAStaticTree(graph, 1)
     for query, correct in zip(queries, expected):
         assert lca_handler.query(*query) == correct
