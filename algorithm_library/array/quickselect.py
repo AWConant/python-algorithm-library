@@ -46,7 +46,7 @@ def quickselect(xs, k):
         else:
             return select(xs, i+1, hi, k)
 
-    if xs:
+    if not xs:
         return None
 
     if k < 0 or k > len(xs) - 1:
