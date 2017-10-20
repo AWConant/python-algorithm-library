@@ -8,12 +8,14 @@ class UnionFind(object):
     Space complexity: O(n)
 
     Parameters:
-    keys -- labels of all keys that can appear in sets
+    keys -- (optional) iterable containing labels of keys known ahead of time
     """
-    def __init__(self, keys):
-        self.parent_of = {key: key for key in keys}
-        self.size_of = {key: 1 for key in keys}
-        self.node_count = len(keys)
+    def __init__(self, keys=[]):
+        self.parent_of = dict()
+        self.rank_of = dict()
+
+        for key in keys:
+            self.make_set(key)
 
     def _find(self, key):
         """
@@ -37,6 +39,19 @@ class UnionFind(object):
 
         return current
 
+    def make_set(self, key):
+        """
+        Add a set containing only key to the data structure.
+
+        Time complexity -- O(1)
+        Space complexity -- O(1)
+
+        Parameters:
+        key -- label of key
+        """
+        self.parent_of[key] = key
+        self.rank_of[key] = 1
+
     def union(self, key1, key2):
         """
         If key1 and key2 are in different sets, merge their sets.
@@ -52,11 +67,11 @@ class UnionFind(object):
         root2 = self._find(key2)
 
         if root1 != root2:
-            if self.size_of[root1] >= self.size_of[root2]:
-                self.size_of[root1] += self.size_of[root2]
+            if self.rank_of[root1] >= self.rank_of[root2]:
+                self.rank_of[root1] += self.rank_of[root2]
                 self.parent_of[root2] = root1
             else:
-                self.size_of[root2] += self.size_of[root1]
+                self.rank_of[root2] += self.rank_of[root1]
                 self.parent_of[root1] = root2
 
     def same_set(self, key1, key2):
