@@ -1,4 +1,4 @@
-from .. import binary_search
+from arrays.binary_search import binary_search
 
 import pytest
 
@@ -12,4 +12,4 @@ import pytest
     ([], 0, -1),
 ])
 def test_general(xs, x, idx):
-    assert binary_search.binary_search(xs, x) == idx
+    assert binary_search(xs, x) == idx

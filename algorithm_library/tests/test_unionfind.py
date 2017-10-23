@@ -1,10 +1,10 @@
-from .. import unionfind
+from datastructures.unionfind import UnionFind
 
 import pytest
 import itertools
 
 def test_general():
-    uf = unionfind.UnionFind(list(range(10)))
+    uf = UnionFind(list(range(10)))
 
     assert uf.same_set(0, 0)
     assert not uf.same_set(0, 1)

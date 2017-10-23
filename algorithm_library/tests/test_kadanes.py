@@ -1,4 +1,4 @@
-from .. import kadanes
+from arrays.kadanes import kadanes
 
 import pytest
 
@@ -10,4 +10,4 @@ import pytest
     ([-2, -3, 4, -1, -2, 1, 5, -3], 7),
 ])
 def test_general(array, expected):
-    assert kadanes.kadanes(array) == expected
+    assert kadanes(array) == expected
