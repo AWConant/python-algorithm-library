@@ -1,4 +1,4 @@
-from .. import quickselect
+from arrays.quickselect import quickselect
 
 import pytest
 
@@ -9,9 +9,9 @@ import pytest
     ([], 4, None),
 ])
 def test_general(xs, k, expected):
-    assert quickselect.quickselect(xs, k) == expected
+    assert quickselect(xs, k) == expected
 
 def test_exception():
     with pytest.raises(IndexError):
-        quickselect.quickselect([1,2,3], 6)
-        quickselect.quickselect([1,2,3], -1)
+        quickselect([1,2,3], 6)
+        quickselect([1,2,3], -1)

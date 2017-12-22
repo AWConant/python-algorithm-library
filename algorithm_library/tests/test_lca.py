@@ -1,4 +1,4 @@
-from .. import lca
+from graph.lca import LCAStaticTree
 
 import pytest
 from collections import defaultdict
@@ -16,6 +16,6 @@ def test_general(edges, queries, expected):
         graph[u].append(v)
         graph[v].append(u)
 
-    lca_handler = lca.LCAStaticTree(graph, 1)
+    lca_handler = LCAStaticTree(graph, 1)
     for query, correct in zip(queries, expected):
         assert lca_handler.query(*query) == correct

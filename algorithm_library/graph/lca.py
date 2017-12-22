@@ -1,4 +1,4 @@
-from ..array import sparsetable
+from datastructures.sparsetable import SparseTable, rmq_idx
 
 class LCAStaticTree(object):
     """
@@ -20,7 +20,7 @@ class LCAStaticTree(object):
         self.euler_walk = []
         self.depth_array = []
         self._perform_euler_walk()
-        self.rmq_handler = sparsetable.SparseTable(self.depth_array, sparsetable.rmq_idx, True)
+        self.rmq_handler = SparseTable(self.depth_array, rmq_idx, True)
 
     def query(self, node1, node2):
         """
