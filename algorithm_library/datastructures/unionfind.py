@@ -8,7 +8,8 @@ class UnionFind(object):
     Space complexity: O(n)
 
     Parameters:
-    keys -- (optional) iterable containing labels of keys known ahead of time
+    keys -- (optional) iterable containing labels of keys known ahead at
+            initialization time
     """
     def __init__(self, keys=[]):
         self.parent_of = dict()
@@ -19,9 +20,10 @@ class UnionFind(object):
 
     def _find(self, key):
         """
-        Return the root of the tree representing the set containing key.
-        Change the parent of all nodes along the path from key->root to root
-        to compress the search path for future invocations of _find.
+        Return the root of the tree representing the set containing `key`.
+        Change the parent of all nodes along the path from `key`->`root` to
+        `root` in order to compress the search path for future invocations of
+        `_find`.
 
         Time complexity: O(a(n)) (inverse Ackerman function; basically constant)
         Space complexity: O(1)
@@ -45,7 +47,7 @@ class UnionFind(object):
 
     def make_set(self, key):
         """
-        Add a set containing only key to the data structure.
+        Add a set containing only `key` to the data structure.
 
         Time complexity -- O(1)
         Space complexity -- O(1)
@@ -58,7 +60,7 @@ class UnionFind(object):
 
     def union(self, key1, key2):
         """
-        If key1 and key2 are in different sets, merge their sets.
+        If `key1` and `key2` are in different sets, merge their sets.
 
         Time complexity: O(a(n)) (inverse Ackerman function; basically constant)
         Space complexity: O(1)
@@ -80,7 +82,7 @@ class UnionFind(object):
 
     def same_set(self, key1, key2):
         """
-        If key1 and key2 are in the same set, return True. Otherwise,
+        If `key1` and `key2` are in the same set, return True. Otherwise,
         return False.
 
         Time complexity: O(a(n)) (inverse Ackerman function; basically constant)
