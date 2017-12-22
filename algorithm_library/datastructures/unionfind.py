@@ -20,8 +20,8 @@ class UnionFind(object):
     def _find(self, key):
         """
         Return the root of the tree representing the set containing key.
-        Connect this discovered root as the parent of key to compress the
-        search path for future invocations of _find.
+        Change the parent of all nodes along the path from key->root to root
+        to compress the search path for future invocations of _find.
 
         Time complexity: O(a(n)) (inverse Ackerman function; basically constant)
         Space complexity: O(1)
@@ -29,13 +29,17 @@ class UnionFind(object):
         Parameters:
         key -- label of key
         """
-        current = key
-
         # seek root of tree
+        current = key
         while self.parent_of[current] != current:
             current = self.parent_of[current]
+        root = current
         
-        self.parent_of[key] = current # compress path
+        # compress path from each encountered node to root
+        current = key
+        while current != root:
+            self.parent_of[current] = root
+            current = self.parent_of[current]
 
         return current
 
